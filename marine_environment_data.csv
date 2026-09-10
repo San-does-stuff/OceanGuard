@@ -1,0 +1,11 @@
+source,data_type,parameter,value,unit,latitude,longitude,recorded_date
+OBIS,Species Observation,Green Turtle,Observed,species,-13.163068,-72.545128,2026-08-01
+OBIS,Species Observation,Coral Reef,Observed,species,-13.200000,-72.500000,2026-08-03
+OBIS,Species Observation,Dolphin,Observed,species,-13.250000,-72.600000,2026-08-05
+Copernicus Marine,Ocean Condition,Water Temperature,26,degree Celsius,-13.163068,-72.545128,2026-08-10
+Copernicus Marine,Ocean Condition,Salinity,35,PSU,-13.200000,-72.500000,2026-08-10
+Copernicus Marine,Ocean Condition,Ocean Current,Moderate,level,-13.300000,-72.650000,2026-08-12
+Copernicus Marine,Ocean Condition,Water Temperature,27,degree Celsius,-13.350000,-72.700000,2026-08-15
+OBIS,Species Observation,Sea Turtle,Observed,species,-13.400000,-72.750000,2026-08-18
+OBIS,Species Observation,Marine Fish Species,Observed,species,-13.450000,-72.800000,2026-08-20
+Copernicus Marine,Ocean Condition,Chlorophyll Level,Low,level,-13.500000,-72.850000,2026-08-22
