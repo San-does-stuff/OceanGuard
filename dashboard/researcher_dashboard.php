@@ -197,6 +197,34 @@ Import CSV Dataset
 
 </button>
 
+<br><br>
+
+<div class="card">
+
+<h3>
+SDG-14 Impact Report
+</h3>
+
+
+<p>
+
+Analyze OceanGuard environmental sustainability outcomes.
+
+</p>
+
+
+<button>
+
+<a href="../reports/sdg14_report.php">
+
+View SDG-14 Report
+
+</a>
+
+</button>
+
+
+</div>
 
 </div>
 

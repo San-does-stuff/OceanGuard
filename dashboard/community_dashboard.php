@@ -74,6 +74,10 @@ button{
 
     border-radius:5px;
 
+    margin-right:10px;
+
+    margin-bottom:10px;
+
 }
 
 
@@ -91,7 +95,7 @@ button{
 
 Welcome,
 
-<?php echo $_SESSION['name']; ?>
+<?php echo htmlspecialchars($_SESSION['name']); ?>
 
 </h1>
 
@@ -177,14 +181,32 @@ Cleanup Activities
 
 <p>
 
-Join future environmental cleanup campaigns.
+Browse available cleanup campaigns and participate in community environmental activities.
 
 </p>
 
 
-<button disabled>
+<button>
 
-Coming Soon
+<a href="../campaigns/view_available_campaigns.php">
+
+Browse Campaigns
+
+</a>
+
+</button>
+
+
+<br>
+
+
+<button>
+
+<a href="../campaigns/my_participations.php">
+
+My Participations
+
+</a>
 
 </button>
 
@@ -198,7 +220,8 @@ Coming Soon
 <br>
 
 
-<a href="../authentication/logout.php">
+<a href="../authentication/logout.php"
+   style="color:black;">
 
 Logout
 
