@@ -105,12 +105,11 @@ body{
 button{
 
     background:#007bff;
-
     border:none;
-
     padding:10px;
-
     border-radius:5px;
+    color:white;
+    cursor:pointer;
 
 }
 
@@ -253,15 +252,7 @@ value="<?php echo $row['campaign_id']; ?>">
 
 
 <button type="submit">
-
-
-<a href="#">
-
 Join Campaign
-
-</a>
-
-
 </button>
 
 

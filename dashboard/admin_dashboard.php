@@ -243,6 +243,13 @@ Logout
 
 </a>
 
+<br>
+
+<a href="../admin/view_users.php">
+
+Manage Users
+
+</a>
 
 
 </body>

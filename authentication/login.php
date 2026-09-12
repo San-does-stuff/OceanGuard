@@ -159,6 +159,11 @@ Password:
 Login
 
 </button>
-
+<p>
+Need an account?
+<a href="register.php">
+Register
+</a>
+</p>
 
 </form>
