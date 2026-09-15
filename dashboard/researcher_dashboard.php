@@ -2,7 +2,6 @@
 
 session_start();
 
-
 include "../includes/auth_check.php";
 
 
@@ -10,16 +9,13 @@ include "../includes/auth_check.php";
 
 if($_SESSION['role'] != "Marine Researcher"){
 
-
     header(
         "Location: ../authentication/login.php"
     );
 
-
     exit();
 
 }
-
 
 ?>
 
@@ -41,46 +37,122 @@ Marine Researcher Dashboard
 
 body{
 
-font-family: Arial;
+    font-family: Arial, sans-serif;
+
+    background:#f5f8fa;
+
+    padding:20px;
 
 }
+
+
+
+h1,h2{
+
+    color:#003b5c;
+
+}
+
+
+
+.dashboard-container{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
 
 
 .card{
 
 
-border:1px solid #ccc;
+    background:white;
 
-padding:20px;
+    border:1px solid #ddd;
 
-margin:20px;
+    padding:20px;
 
-width:300px;
+    width:300px;
 
+    border-radius:10px;
+
+    box-shadow:0px 2px 5px rgba(0,0,0,0.1);
 
 }
+
+
+
+.card h3{
+
+    color:#0077b6;
+
+}
+
+
+
+.card p{
+
+    min-height:50px;
+
+}
+
 
 
 button{
 
 
-padding:10px;
+    padding:10px 15px;
 
-background:#007bff;
+    background:#007bff;
 
-border:none;
+    border:none;
 
-border-radius:5px;
+    border-radius:5px;
 
+    cursor:pointer;
 
 }
 
 
-a{
 
-color:white;
+button:hover{
 
-text-decoration:none;
+    background:#0056b3;
+
+}
+
+
+
+button a{
+
+
+    color:white;
+
+    text-decoration:none;
+
+}
+
+
+
+.logout{
+
+
+    margin-top:30px;
+
+}
+
+
+
+.logout a{
+
+
+    color:red;
+
+    text-decoration:none;
 
 }
 
@@ -93,6 +165,7 @@ text-decoration:none;
 
 
 <body>
+
 
 
 <h1>
@@ -111,6 +184,12 @@ Marine Researcher Dashboard
 
 
 
+<div class="dashboard-container">
+
+
+
+<!-- Marine Environmental Data -->
+
 <div class="card">
 
 
@@ -120,19 +199,19 @@ Marine Environmental Data
 
 
 <p>
-View biodiversity and ocean condition datasets.
+
+View stored marine datasets and environmental records.
+
 </p>
 
 
 <button>
-
 
 <a href="../researcher/view_marine_data.php">
 
 View Marine Data
 
 </a>
-
 
 </button>
 
@@ -141,6 +220,81 @@ View Marine Data
 
 
 
+
+
+<!-- NEW OBIS BIODIVERSITY MODULE -->
+
+<div class="card">
+
+
+<h3>
+Marine Biodiversity Monitoring
+</h3>
+
+
+<p>
+
+Explore OBIS biodiversity observations,
+species records and geographic distribution.
+
+</p>
+
+
+<button>
+
+<a href="../researcher/biodiversity_dashboard.php">
+
+Open Biodiversity Dashboard
+
+</a>
+
+</button>
+
+
+</div>
+
+
+
+
+
+<!-- Future Ocean Conditions -->
+
+<div class="card">
+
+
+<h3>
+Ocean Conditions Monitoring
+</h3>
+
+
+<p>
+
+View temperature, salinity and ocean condition data.
+
+<br><br>
+
+<i>
+Copernicus / IMOS integration coming in Phase 6.
+</i>
+
+
+</p>
+
+
+<button disabled>
+
+Coming Soon
+
+</button>
+
+
+</div>
+
+
+
+
+
+<!-- Pollution Reports -->
 
 <div class="card">
 
@@ -151,7 +305,9 @@ Pollution Information
 
 
 <p>
+
 Review verified marine pollution incidents.
+
 </p>
 
 
@@ -174,6 +330,8 @@ View Reports
 
 
 
+<!-- Data Import -->
+
 <div class="card">
 
 
@@ -183,11 +341,14 @@ Data Import
 
 
 <p>
+
 Import external environmental datasets.
+
 </p>
 
 
 <button>
+
 
 <a href="../researcher/import_marine_data.php">
 
@@ -195,11 +356,20 @@ Import CSV Dataset
 
 </a>
 
+
 </button>
 
-<br><br>
+
+</div>
+
+
+
+
+
+<!-- SDG Report -->
 
 <div class="card">
+
 
 <h3>
 SDG-14 Impact Report
@@ -208,12 +378,14 @@ SDG-14 Impact Report
 
 <p>
 
-Analyze OceanGuard environmental sustainability outcomes.
+Analyse OceanGuard sustainability outcomes
+and environmental impact.
 
 </p>
 
 
 <button>
+
 
 <a href="../reports/sdg14_report.php">
 
@@ -221,17 +393,20 @@ View SDG-14 Report
 
 </a>
 
+
 </button>
 
 
 </div>
 
+
+
+
 </div>
 
 
 
-
-<br>
+<div class="logout">
 
 
 <a href="../authentication/logout.php">
@@ -239,6 +414,10 @@ View SDG-14 Report
 Logout
 
 </a>
+
+
+</div>
+
 
 
 </body>
